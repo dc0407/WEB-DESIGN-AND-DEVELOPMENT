@@ -1,0 +1,111 @@
+/*bg image*/
+html {
+    background-image: url(bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+section {
+  background-image: url(image2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:50%
+}
+  
+/*logo*/
+header img{
+    background-color: #fff;
+    margin: 0%;
+    padding: 0%;
+    float: left;
+    overflow: hidden;
+}
+/*navbar styling*/ 
+header nav {
+    background-color: #333;
+    overflow: hidden;
+    transition: width 1s, height 1s;
+    cursor: pointer;
+  }
+li a:hover {
+  transform: scale(1.5);
+}
+
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(158, 180, 35);
+  }
+  /*heading*/
+header h1 {
+    font-size: 200%;
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+/*body*/
+.intro-media {
+    text-align: center;
+}
+video,img {
+    display: inline-block;
+    margin: 0 1%;
+}
+section h3{
+    text-align: justify;
+    text-decoration: underline;
+    font-style:normal;
+    color:rgb(255, 255, 255)
+}
+ 
+/*aside box*/
+.box {
+    background-color: rgb(158, 180, 35);
+    border: 1px solid black;
+    padding: 1%;
+    width: 25%;
+    /*float: right;*/
+  }
+  ol {
+    list-style-type:disc;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  
+  }
+  ol li { 
+    float: left;
+    text-decoration:underline;
+  }
+  ol li a {
+    display:contents;
+    color: rgb(8, 8, 8);
+    padding: 14px 16px;
+  }
+  
+
+ /*footer*/
+footer nav,address{
+    background-color:rgba(255, 255, 255, 0.5); /*rgba sets bg as white with 50% transparency*/
+    width: 100%;
+    padding: 1%;
+    
+}
+
