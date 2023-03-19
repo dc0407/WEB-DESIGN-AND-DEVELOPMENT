@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedbackpage</title>
+    <meta charset="UTF-8">
+   <!-- <link rel="stylesheet" href="stylesexp.css"> -->
+</head>
+<body>
+  <header>
+    <nav>
+    <h3> 
+      Feedback Form 
+    </h3>
+  </nav>
+    <h4>Please do provide your valuable feedback to help us improve more !</h4>
+  </header>
+
+    <form method="post">
+       Name: <input type="text" id="name" placeholder="Enter your name" autocomplete="name" autofocus required> <br> <p></p>
+       Date Of Birth: <input type="date" id="dob" required > <br> <p></p>
+       <label for="aadhar">Aadhar Number:</label>
+         <input type="text" id="aadhar" name="aadhar" placeholder="As per Aadhar Card" required >
+  <br>
+       <p> <input type="file" id="file" accept=".jpg, .pdf">
+       <input type="submit" value="Upload"> </p>
+       Email: <input type="email" id="email" placeholder="Enter a valid mail-id" required> <br> <p></p>
+       <label for="Gender:">Gender:</label> <br>
+       <input type="radio" id="Gender" name="Gender" value="male"> Male <br>
+       <input type="radio" id="Gender" name="Gender" value="female"> Female <br>
+       <input type="radio" id="Gender" name="Gender" value="prefer not to say"> Prefer not to say <br> <p></p>
+       Nationality: <input type="checkbox" name="Nationality" id="Nationality" value="Indian" checked>Indian <br> <p></p>
+       Contact number: <input type="tel" id="Contact number" name="Contact number" placeholder="Enter your phone number" required> <br>
+     <p></p>
+        <label for="Recomendations for more content on" required >Recomendations for more content on :</label>
+        <input type="checkbox" id="Recomendations for more content on" name="Recomendations for more content on" value="JAVA"> JAVA
+        <input type="checkbox" id="Recomendations for more content on" name="Recomendations for more content on" value="C PROGRAMMING">C PROGRAMMING
+        <input type="checkbox" id="Recomendations for more content on" name="Recomendations for more content on" value="CPP"> CPP
+        <br>
+     <p></p>
+       <label for="Your best practised skill: ">Your best practised skill: :</label>
+       <input list="skill-suggestions" id="skills">
+          <datalist id="skill-suggestions">
+                <option value="c PROGRAMMING"> 
+                <option value="java">
+                <option value="python">
+                <option value="cpp">
+                <option value="mysql">
+                <option value="javascript">
+                <option value="php">
+                <option value="HTML">
+                <option value="css">
+         </datalist>
+          <br> <p></p>
+        Knowledge on that skill: 
+        <input type="range" id="range" name="range" min="elimentary" max="professional"> <br> <p></p>
+
+       Suggestions:
+        <textarea id="Suggestions" name="Suggestions" required></textarea>
+        <br> <p></p>
+      
+        <input type="submit" value="Submit">
+        <input type="reset" name="reset" id="reset">
+      </form>
+      <br>
+      <footer> <address>
+        <a href="main.html">Home</a>
+      </address>
+      </footer>
+</body>
+</html>
