@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login or Signup</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h3>Login/Signup</h3>
+    </header>
+
+    <div id="login-form">
+      <h2>Login</h2>
+
+      <form action="/login" method="get" autocomplete="on">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter registered email-id" autofocus  required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="checkbox" id="Remember me" name="Remember me"> 
+        <label for="Remember me">Remember me</label> <br>
+        <input type="submit" value="Submit"> 
+        <input type="reset" value="Reset">
+      </form>
+    </div>
+    <div id="signup-form">
+      <h2>Signup</h2>
+      <form action="/signup" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" autofocus required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter valid mail-id" required><br>
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" name="phone number"  pattern="\d{10}" placeholder="xxxxxxxxxx" required> <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="password-confirm">Confirm Password:</label>
+        <input type="password" id="password-confirm" name="password-confirm" required><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body> <br>
+  <footer>
+    <address>
+      <a href="main.html">Home</a>
+    </address>
+  </footer>
+</html>
