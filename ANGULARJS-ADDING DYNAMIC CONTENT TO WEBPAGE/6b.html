@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+    body {
+  font-family:'Courier New', Courier, monospace;
+  background-color: #b8c4ff;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  padding: 20px;
+}
+
+h3 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 5px;
+  border: 1px solid #080808;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 5px 10px;
+  background-color: #5981e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #241e51;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div ng-app="">
+    <form action="https://www.google.com" name="f1" method="post">
+        <table>
+            <tr>
+                <td colspan="3"> <h3>Login form</h3></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="t1" id="" ng-model="name" minlength="3" maxlength="8" required></td>
+                <td class="error" ng-show="f1.t1.$touched && f1.t1.$invalid">this is required</td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="email" name="t2" id="" ng-model="email" required></td>
+                <td class="error" ng-show="f1.t2.$touched && f1.t2.$invalid">this is required</td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="t3" id="" ng-model="password" minlength="6" required></td>
+                <td class="error" ng-show="f1.t3.$touched && f1.t3.$invalid">this is required</td>
+            </tr>
+            <tr>
+                <td><input type="SUBMIT" value="submit"></td>
+                <td><input type="RESET" value="reset"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>
