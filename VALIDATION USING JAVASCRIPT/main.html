@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>form validation</title>
+    <script>  
+        function validateform(){ 
+            
+        var name=document.myform.name.value;  
+        if (name==""){  
+          alert("Name can't be blank");
+          document.myform.name.focus();  
+          return false;  
+        }if(name.length<6){  
+          alert("Name must be at least 6 characters long.");  
+          document.myform.name.focus();  
+          return false;  
+          }  
+
+        var password=document.myform.password.value;
+        if (password==null || password==""){
+            alert("Password can't be blank");
+            document.myform.password.focus() ;
+            return false;
+        }else if(password.length<6){
+            alert("Password must be at least 6 characters long.");
+            document.myform.password.focus() ;
+            return false;
+        }
+
+        var Email=document.myform.Email.value;
+        atpos = EmailID.indexOf("@");
+        dotpos = EmailID.lastIndexOf(".");
+        if (atpos < 1 || ( dotpos - atpos < 2 )) {
+           alert("Please enter correct email ID")
+        document.myForm.EMail.focus() ;
+        return false;
+          }
+        return( true );
+
+        var number=document.myform.number.value;
+       if(number.length != 10){
+           alert("Phone number must contain 10 digits only");
+           document.myform.number.focus();
+          return false;
+        }
+        return true;
+        var num=document.myform.num.value;
+
+        if(num.length!=10){
+                alert("empty string");
+                return false;
+            }
+            return true;
+    
+
+        var EducationQualification=document.myform.EducationQualification.value;
+        if(document.myform.EducationQualification.value===" "){
+            alert("REQUIRED FEILD");
+        }
+        
+    }
+        </script> 
+    </head>
+<body>
+    
+    <h1>REGISTRATION PAGE-JOB PORTAL</h1> <br>
+    
+    <section>
+        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+        Name: <input type="text" name="name"><br>  
+        Password: <input type="password" name="password"><br>  
+        Email: <input type="email" name="email"> <br>
+        num: <input type="tel" name="num"> <br>
+        Education Qualification: <input type="text" name="qualification"> <br>
+        <input type="submit" value="register" onsubmit="validateform()">  
+        </form>  
+</section>
+</body>
+</html>
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SALARY REPORT</title>
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d6eeb8;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ccc;
+}
+
+input[type=text], input[type=number] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #617326;
+}
+
+p {
+    font-weight: bold;
+    margin: 0;
+}
+    </style>
+    <script>
+        function calc(){
+            var name=document.myform.name.value;
+            var id=document.myform.id.value;
+            if(name==""){
+            alert("Enter name");
+            document.myform.name.focus();
+            return false;
+        }
+        if(name.length<6){
+            alert("enter name greater than 6 letters");
+            document.myform.name.focus();
+            return false;
+        }
+        if(id.length!=10){
+            alert("Enter Correct id Number");
+            document.myform.id.focus();
+            return false;
+        }
+            let salary=document.myform.salary.value;
+            let hra=0.4*salary;
+            let da=0.6*salary;
+            let grsal=parseInt(salary)+parseInt(hra)+parseInt(da);
+            let pf=0.13*grsal;
+            let tax=0.2*grsal;
+            let ded=pf+tax;
+            let net=parseInt(grsal)-parseInt(ded);
+            document.getElementById("hra").innerHTML=hra;
+            
+            document.getElementById("da").innerHTML=da;
+            document.getElementById("grsal").innerHTML=grsal;
+            document.getElementById("pf").innerHTML=pf;
+            document.getElementById("tax").innerHTML=tax;
+            document.getElementById("ded").innerHTML=ded;
+            document.getElementById("net").innerHTML=net;
+        }
+    </script>
+</head>
+<body>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <form action="" name="myform" method="post" onsubmit="return false">
+            <tr>
+                <td colspan="2">EMPLOYEE SALARY REPORT</td>
+            </tr>
+            <tr>
+                <td>Employee Name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Employee number:</td>
+                <td><input type="number" name="id"></td>
+            </tr>
+            <tr>
+                <td>Basic Salary:</td>
+                <td><input type="number" name="salary"></td>
+            </tr>
+            <tr>
+                <td>HRA(40% of basic)</td>
+                <td><p id="hra"></p></td>
+            </tr>
+            <tr>
+                <td>DA(60% of basic)</td>
+                <td><p id="da"></p></td>
+            </tr>
+            <tr>
+                <td>Gross Salary</td>
+                <td><p id="grsal"></p></td>
+            </tr>
+            <tr>
+                <td>PF(13% of basic)</td>
+                <td><p id="pf"></p></td>
+            </tr>
+            <tr>
+                <td>Tax(20% of the gross)</td>
+                <td><p id="tax"></p></td>
+            </tr>
+            <tr>
+                <td>Deductions(PF+Tax)</td>
+                <td><p id="ded"></p></td>
+            </tr>
+            <tr>
+                <td>Net salary(Gross-Dedections)</td>
+                <td><p id="net"></p></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><button onclick="calc()">submit</button></center>
+                    </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

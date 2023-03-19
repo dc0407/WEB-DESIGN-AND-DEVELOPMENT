@@ -1,0 +1,16 @@
+html {
+    background-image: url(bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+h1{
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(20, 1, 1);
+    text-align: center;
+    text-decoration:underline;
+}
+form{
+    text-align: center;
+}
