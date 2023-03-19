@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION USING JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        section {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #100e0e;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"],
+        form input[type="tel"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        form input[type="submit"]:hover {
+            background-color: #aac647;
+        }
+    </style>
+
+</head>
+<body>
+    <H1>JOB PORTAL-REGISTRATION FORM</H1>
+    
+        <script>
+            function validation(){
+                var name= document.myform.name.value;
+                var phonenumber=document.myform.tel.value;
+                var password=document.myform.password.value;
+                var email=document.myform.email.value;
+                var atpos=email.indexOf('@');
+                var dotpos=email.indexOf('.');
+                var qualification=document.myform.qualification.value
+                if(name==""){
+                    alert("Enter name");
+                    document.myform.fname.focus();
+                    return false;
+                }
+                if(name.length<6){
+                    alert("enter name greater than 6 letters");
+                    document.myform.name.focus();
+                    return false;
+                }
+                if(password==""){
+                   alert("enter password");
+                   document.myform.password.focus();
+                   return false;
+                }
+                if(password.length<6){
+                  alert("enter password greater than 6 letters");
+                  document.myform.password.focus();
+                  return false;
+                }
+                if(email==""){
+                 alert("Enter email");
+                 document.myform.email.focus();
+                 return false;
+                }
+                if(atpos==0){
+                alert("@ is 0");
+                return false;
+                }
+                if(dotpos-atpos<=2){
+                 alert("@ 2 .");
+                 return false;
+                }
+                if(email.length-dotpos<=2){
+                alert("last");
+                return false;
+                }
+                if(tel==""){
+                 alert("Enter phone");
+                 document.myform.tel.focus();
+                 return false;
+                }
+                if(tel.length!=10){
+                 alert("Enter Phone Number");
+                 document.myform.pnum.focus();
+                  return false;
+                }
+        if(qualification==""){
+            alert("Enter Qualifications");
+            document.myform.qualification.focus();
+            return false;
+        }
+    }
+</script>        
+
+<section>
+    <form name="myform" method="post" action="abc.jsp" onsubmit="return validation()" >  
+    Name: <input type="text" name="name"><br>  
+    Password: <input type="password" name="password"><br>  
+    Email: <input type="email" name="email"> <br>
+    Phone number: <input type="tel" name="tel"> <br>
+    Education Qualification: <input type="text" name="qualification"> <br>
+    <center><input type="submit" value="register" onclick="validation()">   </center>
+    </form>  
+</section>
+    
+</body>
+</html>
